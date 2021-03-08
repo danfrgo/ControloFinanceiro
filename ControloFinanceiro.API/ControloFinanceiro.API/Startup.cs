@@ -1,0 +1,92 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ControloFinanceiro.API
+{
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddCors();
+
+            services.AddSpaStaticFiles(diretorio =>
+            {
+                diretorio.RootPath = "ControloFinanceiro-UI";
+            });
+
+            // Para API ignorar valores nulos -> .AddJsonOptions(opcoes => opcoes.JsonSerializerOptions.IgnoreNullValues = true)
+            services.AddControllers()
+                .AddJsonOptions(opcoes =>
+                {
+                    opcoes.JsonSerializerOptions.IgnoreNullValues = true;
+                })
+                // para ignorar referencias https://pt.stackoverflow.com/questions/123121/refer%C3%AAncia-circular-entre-dois-projetos
+                .AddNewtonsoftJson(opcoes =>
+                {
+                    opcoes.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
+
+
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseCors(opcoes => opcoes.AllowAnyOrigin().AllowAnyMethod().AllowAnyMethod());
+
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseStaticFiles();
+
+            app.UseSpaStaticFiles();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+            app.UseSpa(spa =>
+            {
+                // combinar o atual diretorio com o diretorio do angular ("ControloFinanceiro")
+                spa.Options.SourcePath = Path.Combine(Directory.GetCurrentDirectory(), "ControloFinanceiro-UI");
+
+                // para executar o angular e a api juntos
+                if (env.IsDevelopment())
+                {
+                    spa.UseProxyToSpaDevelopmentServer($"http://localhost:4200/");
+                }
+
+            });
+
+
+        }
+    }
+}
