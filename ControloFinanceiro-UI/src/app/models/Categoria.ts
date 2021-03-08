@@ -1,3 +1,4 @@
+import { Tipo } from './Tipo';
 export class Categoria
 {
     categoriaId: number;
