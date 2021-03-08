@@ -65,6 +65,8 @@ namespace ControloFinanceiro.API
                 app.UseDeveloperExceptionPage();
             }
 
+            // app.UseHttpsRedirection();
+
             app.UseCors(opcoes => opcoes.AllowAnyOrigin().AllowAnyMethod().AllowAnyMethod());
 
             app.UseHttpsRedirection();
