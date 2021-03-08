@@ -31,7 +31,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.BLL\\ControloFinanceiro.BLL.csproj": {
+                "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.BLL\\ControloFinanceiro.BLL.csproj"
+              },
+              "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.DAL\\ControloFinanceiro.DAL.csproj": {
+                "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.DAL\\ControloFinanceiro.DAL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -67,6 +74,126 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.BLL\\ControloFinanceiro.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.BLL\\ControloFinanceiro.BLL.csproj",
+        "projectName": "ControloFinanceiro.BLL",
+        "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.BLL\\ControloFinanceiro.BLL.csproj",
+        "packagesPath": "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Daniel.goncalves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.DAL\\ControloFinanceiro.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.DAL\\ControloFinanceiro.DAL.csproj",
+        "projectName": "ControloFinanceiro.DAL",
+        "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.DAL\\ControloFinanceiro.DAL.csproj",
+        "packagesPath": "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Daniel.goncalves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.BLL\\ControloFinanceiro.BLL.csproj": {
+                "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.BLL\\ControloFinanceiro.BLL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

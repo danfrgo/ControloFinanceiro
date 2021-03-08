@@ -287,6 +287,29 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
         }
+      },
+      "ControloFinanceiro.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ControloFinanceiro.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ControloFinanceiro.BLL.dll": {}
+        }
+      },
+      "ControloFinanceiro.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ControloFinanceiro.BLL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ControloFinanceiro.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ControloFinanceiro.DAL.dll": {}
+        }
       }
     }
   },
@@ -720,10 +743,22 @@
         "newtonsoft.json.bson.1.0.2.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
       ]
+    },
+    "ControloFinanceiro.BLL/1.0.0": {
+      "type": "project",
+      "path": "../../ControloFinanceiro.BLL/ControloFinanceiro.BLL.csproj",
+      "msbuildProject": "../../ControloFinanceiro.BLL/ControloFinanceiro.BLL.csproj"
+    },
+    "ControloFinanceiro.DAL/1.0.0": {
+      "type": "project",
+      "path": "../../ControloFinanceiro.DAL/ControloFinanceiro.DAL.csproj",
+      "msbuildProject": "../../ControloFinanceiro.DAL/ControloFinanceiro.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "ControloFinanceiro.BLL >= 1.0.0",
+      "ControloFinanceiro.DAL >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.7",
       "Microsoft.AspNetCore.SpaServices.Extensions >= 3.1.7"
     ]
@@ -759,7 +794,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.BLL\\ControloFinanceiro.BLL.csproj": {
+              "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.BLL\\ControloFinanceiro.BLL.csproj"
+            },
+            "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.DAL\\ControloFinanceiro.DAL.csproj": {
+              "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.DAL\\ControloFinanceiro.DAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

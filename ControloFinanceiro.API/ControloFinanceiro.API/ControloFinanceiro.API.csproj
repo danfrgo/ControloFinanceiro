@@ -13,5 +13,10 @@
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\ControloFinanceiro.BLL\ControloFinanceiro.BLL.csproj" />
+    <ProjectReference Include="..\..\ControloFinanceiro.DAL\ControloFinanceiro.DAL.csproj" />
+  </ItemGroup>
+
 
 </Project>
