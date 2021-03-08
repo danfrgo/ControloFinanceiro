@@ -7,7 +7,7 @@ namespace ControloFinanceiro.BLL.Models
     public class Tipo
     {
         public int TipoId { get; set; }
-        public int Nome { get; set; }
+        public string Nome { get; set; }
 
         //o Tipo terá n categorias logo preciso de uma coleçao de categorias
         public virtual ICollection<Categoria> Categorias { get; set; }

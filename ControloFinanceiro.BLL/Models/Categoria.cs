@@ -12,7 +12,7 @@ namespace ControloFinanceiro.BLL.Models
 
         // chave estrangeira para relacionar com a model Tipo
         public int TipoId { get; set; }
-        public string Tipo{ get; set; }
+        public Tipo Tipo{ get; set; }
 
         // relacionamentos
         public virtual ICollection<Despesa> Despesas { get; set; }
