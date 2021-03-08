@@ -11,7 +11,7 @@ namespace ControloFinanceiro.BLL.Models
         // chave estrangeira para cartao
         public int CartaoId { get; set; }
         public Cartao Cartao { get; set; }
-        public string Decricao { get; set; }
+        public string Descricao { get; set; }
 
         // chave estrangeira Categoria
         public int CategoriaId { get; set; }

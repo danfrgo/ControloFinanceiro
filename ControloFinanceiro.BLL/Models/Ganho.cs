@@ -22,7 +22,7 @@ namespace ControloFinanceiro.BLL.Models
         public int Ano { get; set; }
 
         // chave estrangeira
-        public string Utilizadorid { get; set; }
+        public string UtilizadorId { get; set; }
         public Utilizador Utilizador { get; set; }
 
     }
