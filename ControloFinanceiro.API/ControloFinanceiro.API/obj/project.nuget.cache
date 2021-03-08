@@ -1,9 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Q3gxeRf87i+uKriMhhhQGt/jdNDL8PDvKsnbvBT1hgR/gT6JZWuMDoIPsD5/Lr5qeqvgw7bpEucTAaFL5BFNoQ==",
+  "dgSpecHash": "COFrP/DE6Wu/2SucRXA1IdMbc5h8HZIesVbWoCEjLN7LDstCN/gSny+oyB8kVWH0UejFrgAYcbdG66674N9Ugw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.API\\ControloFinanceiro.API\\ControloFinanceiro.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512",
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\2.2.0\\microsoft.aspnetcore.cryptography.keyderivation.2.2.0.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.7\\microsoft.aspnetcore.jsonpatch.3.1.7.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.7\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.7.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.1.7\\microsoft.aspnetcore.nodeservices.3.1.7.nupkg.sha512",
@@ -18,6 +23,8 @@
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.7\\microsoft.extensions.fileproviders.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.7\\microsoft.extensions.fileproviders.physical.3.1.7.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.7\\microsoft.extensions.filesystemglobbing.3.1.7.nupkg.sha512",
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.extensions.identity.core\\2.2.0\\microsoft.extensions.identity.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.extensions.identity.stores\\2.2.0\\microsoft.extensions.identity.stores.2.2.0.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.extensions.logging\\3.1.7\\microsoft.extensions.logging.3.1.7.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.7\\microsoft.extensions.logging.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.extensions.logging.configuration\\3.1.7\\microsoft.extensions.logging.configuration.3.1.7.nupkg.sha512",
@@ -26,7 +33,39 @@
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.7\\microsoft.extensions.options.configurationextensions.3.1.7.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
-    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework 6.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.EntityFramework 2.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.EntityFramework",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
