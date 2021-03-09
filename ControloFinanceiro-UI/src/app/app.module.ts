@@ -5,6 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 // registar serviços
 import {TiposService} from '../app/services/tipos.service';
@@ -13,11 +14,17 @@ import {CategoriasService} from '../app/services/categorias.service';
 import { ListagemCategoriasComponent } from './components/Categoria/listagem-categorias/listagem-categorias.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatButtonModule} from '@angular/material/button';
-
 // API reference for Angular Material table -> para exibir os dados no HTML
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule } from '@angular/material/icon';
+
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSelectModule} from '@angular/material/select';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -35,7 +42,14 @@ import {MatIconModule } from '@angular/material/icon';
     HttpClientModule,
     MatTableModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDividerModule,
+    MatSelectModule,
+    MatGridListModule,
+    ReactiveFormsModule,
   ],
   providers: [
     TiposService, CategoriasService, HttpClientModule
