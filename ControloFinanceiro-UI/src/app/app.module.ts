@@ -8,14 +8,29 @@ import { AppComponent } from './app.component';
 // registar serviços
 import {TiposService} from '../app/services/tipos.service';
 import {CategoriasService} from '../app/services/categorias.service';
+import { ListagemCategoriasComponent } from './components/Categoria/listagem-categorias/listagem-categorias.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatButtonModule} from '@angular/material/button';
+
+// API reference for Angular Material table -> para exibir os dados no HTML
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListagemCategoriasComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [
     TiposService, CategoriasService, HttpClientModule
