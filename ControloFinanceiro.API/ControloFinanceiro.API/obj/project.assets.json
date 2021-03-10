@@ -2343,7 +2343,10 @@
         },
         "runtime": {
           "bin/placeholder/ControloFinanceiro.BLL.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "ControloFinanceiro.DAL/1.0.0": {
         "type": "project",
@@ -2363,7 +2366,10 @@
         },
         "runtime": {
           "bin/placeholder/ControloFinanceiro.DAL.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -7908,11 +7914,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\controlofinanceiro.api\\controlofinanceiro.api\\ControloFinanceiro.API.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.API\\ControloFinanceiro.API\\ControloFinanceiro.API.csproj",
       "projectName": "ControloFinanceiro.API",
-      "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\controlofinanceiro.api\\controlofinanceiro.api\\ControloFinanceiro.API.csproj",
+      "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.API\\ControloFinanceiro.API\\ControloFinanceiro.API.csproj",
       "packagesPath": "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\controlofinanceiro.api\\controlofinanceiro.api\\obj\\",
+      "outputPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.API\\ControloFinanceiro.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

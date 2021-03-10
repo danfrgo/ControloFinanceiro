@@ -1,5 +1,7 @@
 using ControloFinanceiro.BLL.Models;
 using ControloFinanceiro.DAL;
+using ControloFinanceiro.DAL.Interfaces;
+using ControloFinanceiro.DAL.Repositorios;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +36,11 @@ namespace ControloFinanceiro.API
 
             // Identity
             services.AddIdentity<Utilizador, Funcao>().AddEntityFrameworkStores<Contexto>();
+
+            // Interfaces e Repositorios
+            services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
+            services.AddScoped<ITipoRepositorio, TipoRepositorio>();
+
 
             services.AddCors();
 

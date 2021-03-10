@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\controlofinanceiro.api\\controlofinanceiro.api\\ControloFinanceiro.API.csproj": {}
+    "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.API\\ControloFinanceiro.API\\ControloFinanceiro.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\controlofinanceiro.api\\controlofinanceiro.api\\ControloFinanceiro.API.csproj": {
+    "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.API\\ControloFinanceiro.API\\ControloFinanceiro.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\controlofinanceiro.api\\controlofinanceiro.api\\ControloFinanceiro.API.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.API\\ControloFinanceiro.API\\ControloFinanceiro.API.csproj",
         "projectName": "ControloFinanceiro.API",
-        "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\controlofinanceiro.api\\controlofinanceiro.api\\ControloFinanceiro.API.csproj",
+        "projectPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.API\\ControloFinanceiro.API\\ControloFinanceiro.API.csproj",
         "packagesPath": "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\controlofinanceiro.api\\controlofinanceiro.api\\obj\\",
+        "outputPath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\ControloFinanceiro.API\\ControloFinanceiro.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -214,6 +214,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -318,6 +321,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
