@@ -1,13 +1,16 @@
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { CategoriasService } from './../../../services/categorias.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 // API reference for Angular Material table -> para exibir os dados no HTML
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { Inject } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { startWith, map } from 'rxjs/operators';
+import { MatPaginator} from '@angular/material/paginator';
+import { MatSort} from '@angular/material/sort';
+
 
 @Component({
   selector: 'app-listagem-categorias',
@@ -22,7 +25,13 @@ export class ListagemCategoriasComponent implements OnInit {
   opcoesCategorias: string[] = []; // array com os nomes das categorias
   nomesCategorias: Observable<string[]>; // lista de categorias
 
+ // para injetar paginacao no html
+  @ViewChild(MatPaginator, {static: true})
+  paginator: MatPaginator;
 
+  // ordenação no html
+  @ViewChild(MatSort, {static: true})
+  sort: MatSort;
 
   constructor(
     private categoriasService: CategoriasService,
@@ -30,6 +39,7 @@ export class ListagemCategoriasComponent implements OnInit {
 
   ngOnInit(): void {
 
+    // tslint:disable-next-line: deprecation
     this.categoriasService.ObterTodos().subscribe((resultado) => {
       resultado.forEach((categoria) => {
         // push -> para add dados numa lista
@@ -37,6 +47,8 @@ export class ListagemCategoriasComponent implements OnInit {
       });
 
       this.categorias.data = resultado;
+      this.categorias.paginator = this.paginator;
+      this.categorias.sort = this.sort;
     });
 
     this.displayedColumns = this.ExibirColunas();
@@ -59,8 +71,10 @@ export class ListagemCategoriasComponent implements OnInit {
         categoriaId: categoriaId,
         nome: nome,
       }
+    // tslint:disable-next-line: deprecation
     }).afterClosed().subscribe(resultado => {
       if (resultado === true) {
+        // tslint:disable-next-line: deprecation
         this.categoriasService.ObterTodos().subscribe(dados => {
           this.categorias.data = dados;
         });
@@ -69,15 +83,16 @@ export class ListagemCategoriasComponent implements OnInit {
     });
 
   }
-  
 
   FiltrarNomes(nome: string): string[] {
     if (nome.trim().length >= 4) {
+      // tslint:disable-next-line: deprecation
       this.categoriasService.FiltrarCategorias(nome.toLowerCase()).subscribe(resultado => {
         this.categorias.data = resultado;
       });
     } else {
       if (nome === '') {
+        // tslint:disable-next-line: deprecation
         this.categoriasService.ObterTodos().subscribe(resultado => {
           this.categorias.data = resultado;
         });
@@ -105,6 +120,7 @@ export class DialogRemoverCategoriasComponent {
     private categoriasService: CategoriasService) { }
   // funcao para remover
   RemoverCategoria(categoriaId): void {
+    // tslint:disable-next-line: deprecation
     this.categoriasService.RemoverCategoria(categoriaId).subscribe(resultado => {
 
     });

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/models/Categoria';
 import { Tipo } from 'src/app/models/Tipo';
 
+
 @Component({
   selector: 'app-atualizar-categoria',
   templateUrl: './atualizar-categoria.component.html',
@@ -22,8 +23,7 @@ formulario: any;
 
 
 
-  constructor
-  (
+  constructor(
     private router: Router, 
     private route: ActivatedRoute, // ActivatedRoute -> obter id da rota
     private tiposService: TiposService, 

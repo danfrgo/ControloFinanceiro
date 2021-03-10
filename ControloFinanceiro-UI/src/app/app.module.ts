@@ -35,6 +35,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete'; 
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+
 
 
 
@@ -65,6 +68,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatDialogModule,
     FormsModule,
     MatAutocompleteModule,
+    MatPaginatorModule,
+    MatSortModule,
     ReactiveFormsModule,
   ],
   providers: [
