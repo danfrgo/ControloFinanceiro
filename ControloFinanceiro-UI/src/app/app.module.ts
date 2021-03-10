@@ -15,6 +15,7 @@ import {CategoriasService} from '../app/services/categorias.service';
 import { ListagemCategoriasComponent } from './components/Categoria/listagem-categorias/listagem-categorias.component';
 import { NovaCategoriaComponent } from './components/Categoria/nova-categoria/nova-categoria.component';
 import { AtualizarCategoriaComponent } from './components/Categoria/atualizar-categoria/atualizar-categoria.component';
+import { DialogRemoverCategoriasComponent } from './components/Categoria/listagem-categorias/listagem-categorias.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -29,6 +30,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSelectModule} from '@angular/material/select';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 
@@ -39,6 +42,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ListagemCategoriasComponent,
     NovaCategoriaComponent,
     AtualizarCategoriaComponent,
+    DialogRemoverCategoriasComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +58,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatDividerModule,
     MatSelectModule,
     MatGridListModule,
+    MatDialogModule,
     ReactiveFormsModule,
   ],
   providers: [
