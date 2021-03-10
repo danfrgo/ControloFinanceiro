@@ -1,4 +1,4 @@
-import { NovaCategoriaComponent } from './components/Categoria/nova-categoria/nova-categoria.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
@@ -11,7 +11,11 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {TiposService} from '../app/services/tipos.service';
 import {CategoriasService} from '../app/services/categorias.service';
 
+// components
 import { ListagemCategoriasComponent } from './components/Categoria/listagem-categorias/listagem-categorias.component';
+import { NovaCategoriaComponent } from './components/Categoria/nova-categoria/nova-categoria.component';
+import { AtualizarCategoriaComponent } from './components/Categoria/atualizar-categoria/atualizar-categoria.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // API reference for Angular Material table -> para exibir os dados no HTML
@@ -34,6 +38,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     AppComponent,
     ListagemCategoriasComponent,
     NovaCategoriaComponent,
+    AtualizarCategoriaComponent,
   ],
   imports: [
     BrowserModule,

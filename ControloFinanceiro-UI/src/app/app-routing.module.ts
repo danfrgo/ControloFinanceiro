@@ -1,3 +1,4 @@
+import { AtualizarCategoriaComponent } from './components/Categoria/atualizar-categoria/atualizar-categoria.component';
 import { NovaCategoriaComponent } from './components/Categoria/nova-categoria/nova-categoria.component';
 
 import { NgModule } from '@angular/core';
@@ -14,6 +15,9 @@ const routes: Routes = [
   },
   {
     path: 'categorias/novacategoria', component: NovaCategoriaComponent
+  },
+  {
+    path: 'categorias/atualizarcategoria', component: AtualizarCategoriaComponent 
   }
 ];
 
