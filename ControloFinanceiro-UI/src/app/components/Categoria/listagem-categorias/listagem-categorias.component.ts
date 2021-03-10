@@ -10,6 +10,8 @@ import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { startWith, map } from 'rxjs/operators';
 import { MatPaginator} from '@angular/material/paginator';
 import { MatSort} from '@angular/material/sort';
+import { MatSnackBar} from '@angular/material/snack-bar';
+import { validateHorizontalPosition } from '@angular/cdk/overlay';
 
 
 @Component({
@@ -117,11 +119,18 @@ export class ListagemCategoriasComponent implements OnInit {
 export class DialogRemoverCategoriasComponent {
   constructor( // MAT_DIALOG_DATA - permite enviar dados do component ListagemCategoriasComponent para o DialogRemoverCategoriasComponent
     @Inject(MAT_DIALOG_DATA) public dados: any,
-    private categoriasService: CategoriasService) { }
+    private categoriasService: CategoriasService,
+    private snackBar : MatSnackBar) { }
   // funcao para remover
   RemoverCategoria(categoriaId): void {
     // tslint:disable-next-line: deprecation
     this.categoriasService.RemoverCategoria(categoriaId).subscribe(resultado => {
+      // mensagens de atualizacao, remover
+      this.snackBar.open(resultado.mensagem, null,{
+        duration: 2000,
+        horizontalPosition: 'right',
+        verticalPosition: 'top'
+      });
 
     });
   }

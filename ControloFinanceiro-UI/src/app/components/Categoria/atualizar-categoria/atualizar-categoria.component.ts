@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/models/Categoria';
 import { Tipo } from 'src/app/models/Tipo';
-
+import { MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-atualizar-categoria',
@@ -27,7 +27,8 @@ formulario: any;
     private router: Router, 
     private route: ActivatedRoute, // ActivatedRoute -> obter id da rota
     private tiposService: TiposService, 
-    private categoriasService: CategoriasService){ }
+    private categoriasService: CategoriasService,
+    private snackBar: MatSnackBar){ }
 
 
 
@@ -64,6 +65,11 @@ formulario: any;
       // passar o id da categoria e a propria categoria
       this.categoriasService.AtualizarCategoria(this.categoriaId, categoria).subscribe(resultado => {
         this.router.navigate(['categorias/listagemcategorias']);
+        this.snackBar.open(resultado.mensagem, null,{
+          duration: 2000,
+          horizontalPosition: 'right',
+          verticalPosition: 'top'
+        });
       });
     }
 
