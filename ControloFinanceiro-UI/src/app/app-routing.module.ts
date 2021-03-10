@@ -1,11 +1,10 @@
-import { AtualizarCategoriaComponent } from './components/Categoria/atualizar-categoria/atualizar-categoria.component';
-import { NovaCategoriaComponent } from './components/Categoria/nova-categoria/nova-categoria.component';
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // registar componentes
 import { ListagemCategoriasComponent } from './components/Categoria/listagem-categorias/listagem-categorias.component';
+import { AtualizarCategoriaComponent } from './components/Categoria/atualizar-categoria/atualizar-categoria.component';
+import { NovaCategoriaComponent } from './components/Categoria/nova-categoria/nova-categoria.component';
 
 // registar rotas/componentes
 const routes: Routes = [
@@ -17,7 +16,7 @@ const routes: Routes = [
     path: 'categorias/novacategoria', component: NovaCategoriaComponent
   },
   {
-    path: 'categorias/atualizarcategoria', component: AtualizarCategoriaComponent 
+    path: 'categorias/atualizarcategoria/:id', component: AtualizarCategoriaComponent 
   }
 ];
 

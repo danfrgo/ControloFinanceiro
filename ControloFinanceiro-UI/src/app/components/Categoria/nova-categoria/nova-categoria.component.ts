@@ -45,5 +45,10 @@ export class NovaCategoriaComponent implements OnInit {
     });
   }
 
+  // funcao utilizada no formulario para retroceder de pagina
+  VoltarListagem() : void{
+    this.router.navigate(['categorias/listagemcategorias']);
+  }
+
 
 }
