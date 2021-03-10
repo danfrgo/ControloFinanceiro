@@ -14,6 +14,26 @@
 
     </div>
 
+    <mat-divider></mat-divider>
+
+   
+
+    <!-- para o utilizador digitiar a categoria a filtrar-->
+    <!-- formControl -> respetivo aoa componente filtrarNomes-->
+    <div class="divAutoComplete">
+        <form>
+            <mat-form-field class="autoCompleteInput">
+                <input type="text" placeholder="Categoria a filtrar" matInput [formControl]="autoCompleteInput"  [matAutocomplete]="auto" >
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <!-- var nomesCategorias vem do TS-->
+                <mat-option *ngFor="let nome of nomesCategorias | async" [value]="nome"> {{nome}} </mat-option>
+            </mat-autocomplete>
+            </mat-form-field>
+        </form>
+    </div>
+
+
+
 
     <!-- do componente Mat-table-->
     <table mat-table [dataSource]="categorias" class="mat-elevation-z8 tabela">

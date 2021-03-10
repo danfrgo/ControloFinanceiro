@@ -6,6 +6,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 // registar serviços
 import {TiposService} from '../app/services/tipos.service';
@@ -31,6 +32,9 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatSelectModule} from '@angular/material/select';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDialogModule} from '@angular/material/dialog';
+
+
+import {MatAutocompleteModule} from '@angular/material/autocomplete'; 
 
 
 
@@ -59,6 +63,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSelectModule,
     MatGridListModule,
     MatDialogModule,
+    FormsModule,
+    MatAutocompleteModule,
     ReactiveFormsModule,
   ],
   providers: [
