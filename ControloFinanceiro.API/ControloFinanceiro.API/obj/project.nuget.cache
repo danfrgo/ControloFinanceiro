@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ScCSdAZiz2XngnYZl8S1mRJuGD6kRW+/MA9j8tazcweuhz7ByVucksCb+8fy3mL8PEOUsRXugmFXioRFdMsaIA==",
+  "dgSpecHash": "3wItS1pdnYpmjylz+3r7vxogrT3Ww/X7qjrLKf4khmWT+Z5tFkufwDlNu/lCAu6/2X8YgSJbNeA/fh6zt0R1Sw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Daniel.goncalves\\Documents\\AppControloFinanceiro\\controlofinanceiro.api\\controlofinanceiro.api\\ControloFinanceiro.API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\fluentvalidation\\9.5.2\\fluentvalidation.9.5.2.nupkg.sha512",
-    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.5.2\\fluentvalidation.aspnetcore.9.5.2.nupkg.sha512",
-    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.5.2\\fluentvalidation.dependencyinjectionextensions.9.5.2.nupkg.sha512",
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\fluentvalidation\\9.2.0\\fluentvalidation.9.2.0.nupkg.sha512",
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.2.0\\fluentvalidation.aspnetcore.9.2.0.nupkg.sha512",
+    "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.2.0\\fluentvalidation.dependencyinjectionextensions.9.2.0.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.3\\microsoft.aspnetcore.cryptography.internal.5.0.3.nupkg.sha512",
     "C:\\Users\\Daniel.goncalves\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.3\\microsoft.aspnetcore.cryptography.keyderivation.5.0.3.nupkg.sha512",

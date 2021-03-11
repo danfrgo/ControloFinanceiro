@@ -1,4 +1,4 @@
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CategoriasService } from './../../../services/categorias.service';
 import { TiposService } from './../../../services/tipos.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -27,7 +27,7 @@ erros: string[];
   constructor(
     private router: Router, 
     private route: ActivatedRoute, // ActivatedRoute -> obter id da rota
-    private tiposService: TiposService, 
+    private tiposService: TiposService,
     private categoriasService: CategoriasService,
     private snackBar: MatSnackBar){ }
 
@@ -47,9 +47,9 @@ erros: string[];
       this.nomeCategoria = resultado.nome;
       this.formulario = new FormGroup({
         categoriaId: new FormControl(resultado.categoriaId),
-        nome: new FormControl(resultado.nome),
-        icone: new FormControl(resultado.icone),
-        tipoId: new FormControl(resultado.tipoId)
+        nome: new FormControl(resultado.nome, [Validators.required, Validators.maxLength(50)]),
+        icone: new FormControl(resultado.icone, [Validators.required, Validators.maxLength(15)]),
+        tipoId: new FormControl(resultado.tipoId, [Validators.required])
       });
     });
 
@@ -70,7 +70,7 @@ erros: string[];
         this.snackBar.open(resultado.mensagem, null,{
           duration: 2000,
           horizontalPosition: 'right',
-          verticalPosition: 'top'
+          verticalPosition: 'top',
         });
       },
       (err) => {

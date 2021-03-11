@@ -1,4 +1,9 @@
-<div class="dadosCategorias">
+<div *ngIf="!categorias">
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+</div>
+
+
+<div class="dadosCategorias" *ngIf="categorias">
 
     <div class="cabecalho">
         
