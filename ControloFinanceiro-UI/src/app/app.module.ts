@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
@@ -11,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 // registar serviços
 import {TiposService} from '../app/services/tipos.service';
 import {CategoriasService} from '../app/services/categorias.service';
+import {FuncoesService} from '../app/services/funcoes.service';
 
 // components
 import { ListagemCategoriasComponent } from './components/Categoria/listagem-categorias/listagem-categorias.component';
@@ -79,7 +79,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     ReactiveFormsModule,
   ],
   providers: [
-    TiposService, CategoriasService, HttpClientModule
+    TiposService, CategoriasService, FuncoesService, HttpClientModule,
   ],
   bootstrap: [AppComponent]
 })
