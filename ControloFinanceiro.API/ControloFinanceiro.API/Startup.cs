@@ -1,7 +1,10 @@
+using ControloFinanceiro.API.Validacoes;
 using ControloFinanceiro.BLL.Models;
 using ControloFinanceiro.DAL;
 using ControloFinanceiro.DAL.Interfaces;
 using ControloFinanceiro.DAL.Repositorios;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -41,6 +44,8 @@ namespace ControloFinanceiro.API
             services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
             services.AddScoped<ITipoRepositorio, TipoRepositorio>();
 
+            services.AddTransient<IValidator<Categoria>, CategoriaValidator>();
+
 
             services.AddCors();
 
@@ -51,6 +56,7 @@ namespace ControloFinanceiro.API
 
             // Para API ignorar valores nulos -> .AddJsonOptions(opcoes => opcoes.JsonSerializerOptions.IgnoreNullValues = true)
             services.AddControllers()
+                .AddFluentValidation()
                 .AddJsonOptions(opcoes =>
                 {
                     opcoes.JsonSerializerOptions.IgnoreNullValues = true;

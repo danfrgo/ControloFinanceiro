@@ -4,7 +4,7 @@ import { Tipo } from './../../../models/Tipo';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { MatSnackBar} from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-nova-categoria',
@@ -15,6 +15,7 @@ export class NovaCategoriaComponent implements OnInit {
 
   formulario: any;
   tipos: Tipo[];
+  erros: string[]; // erros/validacoes da API no Angular
 
   constructor(
     private tiposService: TiposService,
@@ -23,8 +24,9 @@ export class NovaCategoriaComponent implements OnInit {
     private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
-    // carregar os dados da BD com os tipos a serem selecionados
-    this.tiposService.ObterTodos().subscribe(resultado => {
+    this.erros = [];
+
+    this.tiposService.ObterTodos().subscribe(resultado => { // carregar os dados da BD com os tipos a serem selecionados
       this.tipos = resultado;
       // console.log(resultado);
     });
@@ -41,20 +43,30 @@ export class NovaCategoriaComponent implements OnInit {
 
   EnviarFormulario(): void {
     const categoria = this.formulario.value;
-
+    this.erros = [];
     this.categoriasService.NovaCategoria(categoria).subscribe(resultado => {
       this.router.navigate(['categorias/listagemcategorias']);
       // mensagens/notificacoes atualizado/removido/editado
-      this.snackBar.open(resultado.mensagem, null,{
+      this.snackBar.open(resultado.mensagem, null, {
         duration: 2000,
         horizontalPosition: 'right',
         verticalPosition: 'top'
       });
-    });
+    },
+      (err) => {
+        //console.log(err);
+        if (err.Status === 400) {
+          for (const campo in err.error.errors) {
+            if (err.error.errors.hasOwnProperty(campo)) {
+              this.erros.push(err.error.errors[campo]);
+            }
+          }
+        }
+      });
   }
 
   // funcao utilizada no formulario para retroceder de pagina
-  VoltarListagem() : void{
+  VoltarListagem(): void {
     this.router.navigate(['categorias/listagemcategorias']);
   }
 

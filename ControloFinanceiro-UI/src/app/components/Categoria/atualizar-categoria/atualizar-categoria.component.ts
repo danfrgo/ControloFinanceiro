@@ -20,6 +20,7 @@ categoriaId: number; // obter id da rota
 categoria: Observable<Categoria> // var para receber a categoria
 tipos: Tipo[];
 formulario: any;
+erros: string[];
 
 
 
@@ -33,9 +34,10 @@ formulario: any;
 
 
   ngOnInit(): void {
+    
+    this.erros = [];
 
-    // para obter id da rota
-    this.categoriaId = this.route.snapshot.params.id;
+    this.categoriaId = this.route.snapshot.params.id; // para obter id da rota
     this.tiposService.ObterTodos().subscribe(resultado => {
       this.tipos = resultado;
     });
@@ -60,16 +62,25 @@ formulario: any;
 
     // enviar formulario (htmml)
     EnviarFormulario(): void{
-      // var para obter os valores do atributo
-      const categoria = this.formulario.value;
-      // passar o id da categoria e a propria categoria
-      this.categoriasService.AtualizarCategoria(this.categoriaId, categoria).subscribe(resultado => {
+      
+      const categoria = this.formulario.value; // var para obter os valores do atributo
+     this.erros = [];
+      this.categoriasService.AtualizarCategoria(this.categoriaId, categoria).subscribe(resultado => { // passar o id da categoria e a propria categoria
         this.router.navigate(['categorias/listagemcategorias']);
         this.snackBar.open(resultado.mensagem, null,{
           duration: 2000,
           horizontalPosition: 'right',
           verticalPosition: 'top'
         });
+      },
+      (err) => {
+        if (err.Status === 400) {
+          for (const campo in err.error.errors) {
+            if (err.error.errors.hasOwnProperty(campo)) {
+              this.erros.push(err.error.errors[campo]);
+            }
+          }
+        }
       });
     }
 
