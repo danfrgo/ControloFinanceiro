@@ -38,7 +38,7 @@ export class FuncoesService {
 
   RemoverFuncao(funcaoId: string): Observable<any>{
     const apiUrl = `${this.url}/${funcaoId}`;
-    return this.http.delete<string>(this.url, httpOptions);
+    return this.http.delete<string>(apiUrl, httpOptions);
   }
 
   FiltrarFuncoes(nomeFuncao: string): Observable<Funcao[]>{

@@ -1,3 +1,5 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { startWith, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
@@ -5,7 +7,7 @@ import { FuncoesService } from './../../../services/funcoes.service';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-listagem-funcoes',
@@ -28,7 +30,10 @@ export class ListagemFuncoesComponent implements OnInit {
   sort: MatSort;
 
 
-  constructor(private funcoesService: FuncoesService) { }
+  constructor(
+    private funcoesService: FuncoesService,
+    private dialog: MatDialog
+    ) { }
 
   ngOnInit(): void {
     this.funcoesService.ObterTodos().subscribe((resultado) => {
@@ -67,4 +72,42 @@ export class ListagemFuncoesComponent implements OnInit {
     return this.opcoesFuncoes.filter(funcao => funcao.toLowerCase().includes(nome.toLowerCase()));
   }
 
+  AbrirDiaglog(funacoId, nome): void {
+    this.dialog.open(DialogExcluirFuncoesComponent, {
+      data:{
+        funcaoId: funacoId,
+        nome: nome
+      },
+    }).afterClosed().subscribe(resultado => {
+      if(resultado === true){
+        this.funcoesService.ObterTodos().subscribe(dados => {
+          this.funcoes.data = dados;
+          this.funcoes.paginator = this.paginator;
+        });
+        this.displayedColumns = this.ExibirColunas();
+      }
+    });
+  } 
+}
+
+@Component({
+  selector: 'app-dialog-remover-funcoes',
+  templateUrl: 'dialog-remover-funcoes.html',
+})
+
+export class DialogExcluirFuncoesComponent{
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any, // Inject(MAT_DIALOG_DATA -> para obter os dados
+    private funcoesService: FuncoesService,
+    private snackBar: MatSnackBar) { }
+
+    RemoverFuncao(funcaoId): void{
+      this.funcoesService.RemoverFuncao(funcaoId).subscribe(resultado => {
+        this.snackBar.open(resultado.mensagem, null, {
+          duration: 2000,
+          horizontalPosition: 'right',
+          verticalPosition: 'top'
+        });
+      });
+    }
 }
