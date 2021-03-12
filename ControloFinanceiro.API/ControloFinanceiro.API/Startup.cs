@@ -43,6 +43,7 @@ namespace ControloFinanceiro.API
             // Interfaces e Repositorios
             services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
             services.AddScoped<ITipoRepositorio, TipoRepositorio>();
+            services.AddScoped<IUtilizadorRepositorio, UtilizadorRepositorio>();
 
             services.AddTransient<IValidator<Categoria>, CategoriaValidator>();
             services.AddScoped<IFuncaoRepositorio, FuncaoRepositorio>();
