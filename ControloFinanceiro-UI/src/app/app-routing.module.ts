@@ -13,17 +13,17 @@ import { ListagemFuncoesComponent } from './components/Funcao/listagem-funcoes/l
 // registar rotas/componentes
 const routes: Routes = [
   {
-    path: 'categorias/listagemcategorias', component: ListagemCategoriasComponent
+    path: 'categorias/listagemcategorias', component: ListagemCategoriasComponent,
 
   },
   {
-    path: 'categorias/novacategoria', component: NovaCategoriaComponent
+    path: 'categorias/novacategoria', component: NovaCategoriaComponent,
   },
   {
-    path: 'categorias/atualizarcategoria/:id', component: AtualizarCategoriaComponent 
+    path: 'categorias/atualizarcategoria/:id', component: AtualizarCategoriaComponent,
   },
   {
-    path: 'categorias/listagemfuncoes', component: ListagemFuncoesComponent
+    path: 'funcoes/listagemfuncoes', component: ListagemFuncoesComponent,
 
   },
 ];

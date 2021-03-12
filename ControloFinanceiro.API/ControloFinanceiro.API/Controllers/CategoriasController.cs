@@ -53,8 +53,9 @@ namespace ControloFinanceiro.API.Controllers
             }
 
             // verificar se os dados estao validos
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            if (TryValidateModel(categoria))
+                {
                 await _categoriaRepositorio.Atualizar(categoria);
                 return Ok(new
                 {
@@ -68,7 +69,8 @@ namespace ControloFinanceiro.API.Controllers
         [HttpPost]
         public async Task<ActionResult<Categoria>> PostCategoria(Categoria categoria)
         {
-            if (ModelState.IsValid)
+            // if (ModelState.IsValid)
+            if (TryValidateModel(categoria))
             {
                 await _categoriaRepositorio.Inserir(categoria);
 

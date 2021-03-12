@@ -56,9 +56,9 @@ export class NovaCategoriaComponent implements OnInit {
       (err) => {
         console.log(err);
         if (err.Status === 400) {
-          for (const campo in err.error.errors) {
-            if (err.error.errors.hasOwnProperty(campo)) {
-              this.erros.push(err.error.errors[campo]);
+          for (const campo in err.error) {
+            if (err.error.hasOwnProperty(campo)) {
+              this.erros.push(err.error[campo]);
             }
           }
         }
