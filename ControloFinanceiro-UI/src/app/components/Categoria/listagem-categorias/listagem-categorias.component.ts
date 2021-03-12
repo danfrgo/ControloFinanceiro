@@ -88,13 +88,11 @@ export class ListagemCategoriasComponent implements OnInit {
 
   FiltrarNomes(nome: string): string[] {
     if (nome.trim().length >= 4) {
-      // tslint:disable-next-line: deprecation
       this.categoriasService.FiltrarCategorias(nome.toLowerCase()).subscribe(resultado => {
         this.categorias.data = resultado;
       });
     } else {
       if (nome === '') {
-        // tslint:disable-next-line: deprecation
         this.categoriasService.ObterTodos().subscribe(resultado => {
           this.categorias.data = resultado;
         });

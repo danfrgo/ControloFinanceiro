@@ -78,7 +78,8 @@ namespace ControloFinanceiro.API.Controllers
         [HttpPost]
         public async Task<ActionResult<Funcao>> PostFuncao(FuncoesViewModel funcoes)
         {
-            if (ModelState.IsValid)
+            //if (ModelState.IsValid)
+            if (TryValidateModel(funcoes))
             {
                 Funcao funcao = new Funcao()
                 {

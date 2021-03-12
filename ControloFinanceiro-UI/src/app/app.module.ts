@@ -40,6 +40,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { ListagemFuncoesComponent } from './components/Funcao/listagem-funcoes/listagem-funcoes.component';
+import { NovaFuncaoComponent } from './components/Funcao/nova-funcao/nova-funcao.component';
 
 
 
@@ -55,7 +56,8 @@ import { ListagemFuncoesComponent } from './components/Funcao/listagem-funcoes/l
     NovaCategoriaComponent,
     AtualizarCategoriaComponent,
     DialogRemoverCategoriasComponent,
-    ListagemFuncoesComponent
+    ListagemFuncoesComponent,
+    NovaFuncaoComponent
   ],
   imports: [
     BrowserModule,

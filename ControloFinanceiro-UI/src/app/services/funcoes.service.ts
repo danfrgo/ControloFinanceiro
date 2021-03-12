@@ -27,6 +27,7 @@ export class FuncoesService {
   } 
 
   NovaFuncao(funcao: Funcao): Observable<any>{
+    console.log(funcao);
     return this.http.post<Funcao>(this.url, funcao, httpOptions);
   }
 
