@@ -3,7 +3,7 @@
 </div>
 
 
-<div class="dadosCategorias" *ngIf="categorias">
+<div class="dadosCategorias" >
 
     <div class="cabecalho">
         
@@ -41,7 +41,7 @@
 
 
     <!-- do componente Mat-table-->
-    <table 
+    <table *ngIf="categorias"
     mat-table 
     matSort
     [dataSource]="categorias" 

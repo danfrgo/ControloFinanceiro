@@ -7,6 +7,7 @@ import { AtualizarCategoriaComponent } from './components/Categoria/atualizar-ca
 import { NovaCategoriaComponent } from './components/Categoria/nova-categoria/nova-categoria.component';
 import { ListagemFuncoesComponent } from './components/Funcao/listagem-funcoes/listagem-funcoes.component';
 import { NovaFuncaoComponent } from './components/Funcao/nova-funcao/nova-funcao.component';
+import { AtualizarFuncaoComponent } from './components/Funcao/atualizar-funcao/atualizar-funcao.component';
 
 
 
@@ -28,6 +29,10 @@ const routes: Routes = [
   },
   {
     path: 'funcoes/novafuncao', component: NovaFuncaoComponent,
+
+  },
+  {
+    path: 'funcoes/atualizarfuncao/:id', component: AtualizarFuncaoComponent,
 
   },
 ];

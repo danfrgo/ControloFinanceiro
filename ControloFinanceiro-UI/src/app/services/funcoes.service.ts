@@ -33,7 +33,7 @@ export class FuncoesService {
 
   AtualizarFuncao(funcaoId: string, funcao: Funcao): Observable<any>{
     const apiUrl = `${this.url}/${funcaoId}`;
-    return this.http.put<Funcao>(this.url, funcao, httpOptions);
+    return this.http.put<Funcao>(apiUrl, funcao, httpOptions);
   }
 
   RemoverFuncao(funcaoId: string): Observable<any>{
